@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tali Caplan</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
 
     <nav>
@@ -20,76 +24,51 @@
     </nav>
 
     <section class="hero">
-        <div class="hero-inner">
-            <p class="hero-label">// cs student · northeastern university</p>
-            <h1>Hi, I'm<br><span class="accent">Tali.</span></h1>
-            <p class="hero-sub">
-                I get a bit too into the design phase — I'd rather spend a week arguing about data shapes than a week untangling a mess. Once the architecture is settled, you'll find me in the backend where things either work or they don't.
-            </p>
-            <p class="hero-sub" style="margin-top: 0.75rem;">
-                When I'm not at a computer: snowboarding, tennis, swimming, the usual.
-            </p>
-            <div class="hero-cta">
-                <a href="#projects" class="btn-primary">See my work</a>
-                <a href="https://github.com/NaftaliCaplan" target="_blank" class="btn-ghost">GitHub →</a>
-            </div>
-        </div>
-        <div class="hero-code">
-            <div class="code-window">
-                <div class="code-titlebar">
-                    <span class="dot red"></span>
-                    <span class="dot yellow"></span>
-                    <span class="dot green"></span>
-                    <span class="code-filename">tali.ts</span>
-                </div>
-                <pre class="code-body"><span class="kw">const</span> <span class="var">tali</span> <span class="op">=</span> {
-  <span class="prop">school</span><span class="op">:</span> <span class="str">"Northeastern"</span>,
-  <span class="prop">favouritePhase</span><span class="op">:</span> <span class="str">"design"</span>,
-  <span class="prop">happiest</span><span class="op">:</span> <span class="str">"in the backend"</span>,
-  <span class="prop">outsideCS</span><span class="op">:</span> [
-    <span class="str">"snowboarding"</span>,
-    <span class="str">"tennis"</span>,
-    <span class="str">"swimming"</span>,
-  ],
-  <span class="prop">currentlyBuilding</span><span class="op">:</span> <span class="str">"colorblind cook assistant"</span>,
-  <span class="prop">debuggingStyle</span><span class="op">:</span> <span class="str">"days if necessary"</span>,
-};</pre>
-            </div>
+        <p class="hero-label">cs student · northeastern university</p>
+        <h1>Hi, I'm <span class="accent">Tali.</span></h1>
+        <p class="hero-sub">
+            I really enjoy the design phase — I'd rather spend a week on data shapes and flow diagrams than a week
+            untangling a mess. Once the architecture is settled, I've found my place in the backend where things
+            either work or they don't.
+        </p>
+        <p class="hero-sub">
+            When I'm not at a computer: snowboarding, tennis, swimming.
+        </p>
+        <div class="hero-cta">
+            <a href="#projects" class="btn-primary">See my work</a>
+            <a href="https://github.com/NaftaliCaplan" target="_blank" class="btn-ghost">GitHub →</a>
         </div>
     </section>
 
     <section id="projects">
-        <h2 class="section-title"><span class="accent">// </span>projects</h2>
+        <h2 class="section-title">Projects</h2>
 
         <div class="project-card">
             <div class="project-header">
                 <div>
                     <p class="project-context">CS 4530 Summer School · VS Code Extension · Open Source</p>
-                    <h3>ADR Manager <span class="accent">—</span> TC Annotation Layer</h3>
+                    <h3>ADR Manager — TC Annotation Layer</h3>
                 </div>
-                <a href="https://github.com/OwenSweetman/SummerSchool_MADR" target="_blank" class="project-link">view →</a>
+                <div class="project-links">
+                    <a href="https://marketplace.visualstudio.com/items?itemName=NaftaliCaplan.tc-adr-manager" target="_blank" class="project-link">marketplace →</a>
+                    <a href="https://github.com/OwenSweetman/SummerSchool_MADR" target="_blank" class="project-link">repo →</a>
+                </div>
             </div>
             <p class="project-desc">
-                I was the data layer person on a 5-track team building a VS Code extension — the part nobody sees but everyone depends on. Owned <strong>Track B: TC Data Model & Storage</strong>. Designed the TypeScript interfaces the whole team built against, wired up the YAML read/write, and spent a non-trivial amount of time making sure a grammar migration from one team didn't silently break mine.
+                I was the data layer person on a 5-track team building a VS Code extension for managing Architectural
+                Decision Records. Owned <strong>Track B: TC Data Model & Storage</strong> — the part nobody sees but
+                everyone depends on. Designed the TypeScript interfaces the whole team built against, wired up the YAML
+                read/write, and spent a non-trivial amount of time making sure a grammar migration from another track
+                didn't silently break mine.
             </p>
-            <div class="contribution-list">
-                <div class="contribution-item">
-                    <span class="contrib-tag blue">schema design</span>
-                    <span>Designed <code>TcAnnotation</code> and all enum types (<code>TcCategory</code>, <code>TcSignal</code>, <code>TcStatus</code>) as the shared contract across the full team — if I got this wrong, everyone's work broke</span>
-                </div>
-                <div class="contribution-item">
-                    <span class="contrib-tag green">read / write</span>
-                    <span>Built <code>parseTcFromYaml()</code> and <code>serializeTcToYaml()</code> — automatically extracts and persists annotation fields from YAML frontmatter without corrupting anything else in the file</span>
-                </div>
-                <div class="contribution-item">
-                    <span class="contrib-tag purple">validation</span>
-                    <span>Built <code>validateTcAnnotation()</code> — validates all 6 field types and returns per-field error messages the UI layer consumes directly</span>
-                </div>
-                <div class="contribution-item">
-                    <span class="contrib-tag yellow">testing</span>
-                    <span>78 tests across 4 suites — and fixed all the fixture breakage when Track A migrated the grammar mid-project, which was its own adventure</span>
-                </div>
-            </div>
+            <ul class="contribution-list">
+                <li>Designed <code>TcAnnotation</code> and all enum types (<code>TcCategory</code>, <code>TcSignal</code>, <code>TcStatus</code>) as the shared contract across the full team</li>
+                <li>Built <code>parseTcFromYaml()</code> and <code>serializeTcToYaml()</code> — reads and writes annotation fields from YAML frontmatter without corrupting anything else in the file</li>
+                <li>Built <code>validateTcAnnotation()</code> — validates all 6 field types and returns per-field error messages consumed by the UI layer</li>
+                <li>Mode-aware serialisation: pro-only fields only written when professional editor is active</li>
+                <li>Schema version stamping and real-world compatibility testing against JabRef's 60-file ADR corpus</li>
+                <li>82 tests across 4 suites — including fixing all fixture breakage when Track A migrated the grammar mid-project</li>
+            </ul>
             <div class="tech-tags">
                 <span class="tag">TypeScript</span>
                 <span class="tag">js-yaml</span>
@@ -105,29 +84,19 @@
                     <p class="project-context">CS 3100 · Full-Stack Desktop App · Team of 4</p>
                     <h3>CookYourBooks</h3>
                 </div>
-                <a href="https://github.com/NaftaliCaplan/cook-your-books" target="_blank" class="project-link">view →</a>
+                <a href="https://github.com/NaftaliCaplan/cook-your-books" target="_blank" class="project-link">repo →</a>
             </div>
             <p class="project-desc">
-                Recipe management app — store recipes, scale servings, step through instructions while you cook. I worked full-stack on several features. The one I'm most proud of: the save function in the recipe editor took me multiple days to get right. Not because it was technically exotic, but because I wanted it to actually work correctly, not just appear to.
+                Recipe management app: store recipes, scale servings, step through instructions while you cook.
+                The feature I'm most proud of is the save function in the recipe editor — not because it was technically
+                exotic, but because I wanted it to actually work correctly, not just appear to.
             </p>
-            <div class="contribution-list">
-                <div class="contribution-item">
-                    <span class="contrib-tag green">feature</span>
-                    <span>Built the live timer as a first-class instruction field — editable in the recipe editor, persisted in the data model, starts/pauses and counts down live in cook mode</span>
-                </div>
-                <div class="contribution-item">
-                    <span class="contrib-tag blue">UI</span>
-                    <span>Cook mode step-through interface with active timer — users move through instructions one at a time with the timer ticking alongside</span>
-                </div>
-                <div class="contribution-item">
-                    <span class="contrib-tag purple">full-stack</span>
-                    <span>Full recipe editor: GUI form state, validation, and persistence — the part I debugged for days and would do again</span>
-                </div>
-                <div class="contribution-item">
-                    <span class="contrib-tag yellow">architecture</span>
-                    <span>Introduced <code>ThemeViewModel</code> and refactored <code>MainViewController</code> to decouple theme state cleanly; dark mode PR merged via conflict resolution</span>
-                </div>
-            </div>
+            <ul class="contribution-list">
+                <li>Built the live timer as a first-class instruction field — editable in the recipe editor, persisted in the data model, starts/pauses and counts down live in cook mode</li>
+                <li>Cook mode step-through interface with active timer integration</li>
+                <li>Full recipe editor: GUI form state, validation, and persistence layer</li>
+                <li>Introduced <code>ThemeViewModel</code> and refactored <code>MainViewController</code> to decouple theme state; dark mode PR merged via conflict resolution</li>
+            </ul>
             <div class="tech-tags">
                 <span class="tag">Java</span>
                 <span class="tag">JavaFX</span>
@@ -139,55 +108,57 @@
         <div class="project-card project-card--wip">
             <div class="project-header">
                 <div>
-                    <p class="project-context">In design — personal project</p>
+                    <p class="project-context">Personal project · In design</p>
                     <h3>Colorblind Cook Assistant <span class="wip-badge">in progress</span></h3>
                 </div>
             </div>
             <p class="project-desc">
-                A cooking assistant designed around colorblindness — helping users identify doneness, ripeness, and visual cooking cues they'd otherwise have to guess at. Currently in the design phase, which is honestly my favourite part anyway.
+                A cooking assistant designed around colorblindness — helping users identify doneness, ripeness, and
+                visual cooking cues they'd otherwise have to guess at. Currently in the design phase, which is my
+                favourite part anyway.
             </p>
         </div>
 
     </section>
 
     <section id="skills">
-        <h2 class="section-title"><span class="accent">// </span>skills</h2>
+        <h2 class="section-title">Skills</h2>
         <div class="skills-grid">
             <div class="skill-group">
-                <p class="skill-label kw">languages</p>
+                <p class="skill-label">Languages</p>
                 <ul>
-                    <li><span class="str">"TypeScript"</span></li>
-                    <li><span class="str">"Java"</span></li>
-                    <li><span class="str">"JavaScript"</span></li>
+                    <li>TypeScript</li>
+                    <li>Java</li>
+                    <li>JavaScript</li>
                 </ul>
             </div>
             <div class="skill-group">
-                <p class="skill-label kw">tools</p>
+                <p class="skill-label">Tools</p>
                 <ul>
-                    <li><span class="str">"VS Code Extension API"</span></li>
-                    <li><span class="str">"JavaFX"</span></li>
-                    <li><span class="str">"Node.js"</span></li>
-                    <li><span class="str">"Jest"</span></li>
-                    <li><span class="str">"Gradle"</span></li>
-                    <li><span class="str">"Git"</span></li>
+                    <li>VS Code Extension API</li>
+                    <li>JavaFX</li>
+                    <li>Node.js</li>
+                    <li>Jest</li>
+                    <li>Gradle</li>
+                    <li>Git</li>
                 </ul>
             </div>
             <div class="skill-group">
-                <p class="skill-label kw">concepts</p>
+                <p class="skill-label">Concepts</p>
                 <ul>
-                    <li><span class="str">"data modelling"</span></li>
-                    <li><span class="str">"test-driven development"</span></li>
-                    <li><span class="str">"YAML parsing"</span></li>
-                    <li><span class="str">"MVVM architecture"</span></li>
-                    <li><span class="str">"open source contribution"</span></li>
+                    <li>Data modelling</li>
+                    <li>Test-driven development</li>
+                    <li>YAML parsing</li>
+                    <li>MVVM architecture</li>
+                    <li>Open source contribution</li>
                 </ul>
             </div>
         </div>
     </section>
 
     <section id="contact">
-        <h2 class="section-title"><span class="accent">// </span>contact</h2>
-        <p class="contact-sub">Open to opportunities, collaborations, and conversations. I give good advice too, apparently.</p>
+        <h2 class="section-title">Contact</h2>
+        <p class="contact-sub">Open to opportunities, collaborations, and conversations.</p>
         <div class="contact-links">
             <a href="mailto:caplan.naf@northeastern.edu" class="contact-item">
                 <span class="contact-label">email</span>
@@ -201,8 +172,9 @@
     </section>
 
     <footer>
-        <span class="mono muted">// designed first, then built</span>
+        <span class="muted">designed first, then built</span>
     </footer>
 
 </body>
+
 </html>
