@@ -4,14 +4,14 @@ html { scroll-behavior: smooth; }
 
 /* ── Palette ────────────────────────────────────────── */
 :root {
-    --bg:        #1e1e1e;
-    --surface:   #252526;
-    --surface2:  #2d2d2d;
-    --border:    #3e3e42;
-    --text:      #d4d4d4;
-    --muted:     #858585;
-    --accent:    #4fc1ff;
-    --purple:    #c586c0;
+    --bg:        #1a1a1a;
+    --surface:   #222222;
+    --surface2:  #2a2a2a;
+    --border:    #383838;
+    --text:      #d0d0d0;
+    --muted:     #787878;
+    --accent:    #a8c4d8;
+    --purple:    #a8a8c8;
 }
 
 body {
@@ -27,7 +27,7 @@ body {
 }
 code {
     background: var(--surface2);
-    color: #9cdcfe;
+    color: #b0c8dc;
     padding: 1px 6px;
     border-radius: 3px;
     font-size: 0.88em;
