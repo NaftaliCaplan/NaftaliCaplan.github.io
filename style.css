@@ -131,13 +131,10 @@ section {
 /* ── Project cards ──────────────────────────────────── */
 .project-card {
     background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 8px;
+    border-radius: 6px;
     padding: 2rem;
-    margin-bottom: 1.5rem;
-    transition: border-color 0.2s;
+    margin-bottom: 1rem;
 }
-.project-card:hover { border-color: var(--accent); }
 
 .project-header {
     display: flex;
@@ -210,19 +207,17 @@ section {
     border-radius: 3px;
     background: var(--surface2);
     color: var(--muted);
-    border: 1px solid var(--border);
 }
 
-.project-card--wip { border-style: dashed; opacity: 0.85; }
-.project-card--wip:hover { border-color: var(--purple); opacity: 1; }
+.project-card--wip { opacity: 0.75; }
+.project-card--wip:hover { opacity: 1; }
 .wip-badge {
     font-family: 'JetBrains Mono', monospace;
     font-size: 0.7rem;
     padding: 2px 8px;
     border-radius: 3px;
-    background: rgba(197,134,192,0.15);
-    color: var(--purple);
-    border: 1px solid rgba(197,134,192,0.3);
+    background: var(--surface2);
+    color: var(--muted);
     vertical-align: middle;
     margin-left: 0.5rem;
 }
@@ -235,8 +230,7 @@ section {
 }
 .skill-group {
     background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 8px;
+    border-radius: 6px;
     padding: 1.5rem;
 }
 .skill-label {
@@ -244,8 +238,6 @@ section {
     font-weight: 600;
     color: var(--text);
     margin-bottom: 1rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 1px solid var(--border);
 }
 .skill-group ul { list-style: none; }
 .skill-group li {
@@ -271,12 +263,9 @@ section {
     text-decoration: none;
     padding: 1rem 1.25rem;
     background: var(--surface);
-    border: 1px solid var(--border);
     border-radius: 6px;
-    transition: border-color 0.2s;
     max-width: 480px;
 }
-.contact-item:hover { border-color: var(--accent); }
 .contact-label {
     font-family: 'JetBrains Mono', monospace;
     font-size: 0.75rem;
