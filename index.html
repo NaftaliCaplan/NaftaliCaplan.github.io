@@ -27,12 +27,12 @@
         <p class="hero-label">cs student · northeastern university</p>
         <h1>Hi, I'm <span class="accent">Tali.</span></h1>
         <p class="hero-sub">
-            I really enjoy the design phase — I'd rather spend a week on data shapes and flow diagrams than a week
-            untangling a mess. Once the architecture is settled, I've found my place in the backend where things
-            either work or they don't.
+            I really enjoy the design phase of a project, thinking through options and structure. I really want to
+            ensure I'm diving in with a clear plan.
+            I also enjoy working on more raw backend code that drives the whole program.
         </p>
         <p class="hero-sub">
-            When I'm not at a computer: snowboarding, tennis, swimming.
+            When I'm not at a computer: snowboarding, swimming, the gym, or sleeping.
         </p>
         <div class="hero-cta">
             <a href="#projects" class="btn-primary">See my work</a>
@@ -46,28 +46,36 @@
         <div class="project-card">
             <div class="project-header">
                 <div>
-                    <p class="project-context">CS 4530 Summer School · VS Code Extension · Open Source</p>
-                    <h3>ADR Manager — TC Annotation Layer</h3>
+                    <p class="project-context">CS 4530 Summer School - VS Code Extension - Open Source</p>
+                    <h3>ADR Manager - TC Annotation addition</h3>
                 </div>
                 <div class="project-links">
-                    <a href="https://marketplace.visualstudio.com/items?itemName=NaftaliCaplan.tc-adr-manager" target="_blank" class="project-link">marketplace →</a>
-                    <a href="https://github.com/OwenSweetman/SummerSchool_MADR" target="_blank" class="project-link">repo →</a>
+                    <a href="https://marketplace.visualstudio.com/items?itemName=NaftaliCaplan.tc-adr-manager"
+                        target="_blank" class="project-link">marketplace →</a>
+                    <a href="https://github.com/OwenSweetman/SummerSchool_MADR" target="_blank"
+                        class="project-link">repo →</a>
                 </div>
             </div>
             <p class="project-desc">
                 I was the data layer person on a 5-track team building a VS Code extension for managing Architectural
-                Decision Records. Owned <strong>Track B: TC Data Model & Storage</strong> — the part nobody sees but
-                everyone depends on. Designed the TypeScript interfaces the whole team built against, wired up the YAML
-                read/write, and spent a non-trivial amount of time making sure a grammar migration from another track
-                didn't silently break mine.
+                Decision Records. Designed the TypeScript interfaces the whole team built against, wired up the YAML
+                read/write, and spent an unreasonable amount of time making sure a grammar migration from another track
+                didn't silently break mine. I then transitioned into a role that required me to merge all tracks, polish
+                any bugs, and extend a couple of features to publish a well developed product.
             </p>
             <ul class="contribution-list">
-                <li>Designed <code>TcAnnotation</code> and all enum types (<code>TcCategory</code>, <code>TcSignal</code>, <code>TcStatus</code>) as the shared contract across the full team</li>
-                <li>Built <code>parseTcFromYaml()</code> and <code>serializeTcToYaml()</code> — reads and writes annotation fields from YAML frontmatter without corrupting anything else in the file</li>
-                <li>Built <code>validateTcAnnotation()</code> — validates all 6 field types and returns per-field error messages consumed by the UI layer</li>
+                <li>Designed <code>TcAnnotation</code> and all enum types (<code>TcCategory</code>,
+                    <code>TcSignal</code>, <code>TcStatus</code>) as the shared contract across the full team
+                </li>
+                <li>Built <code>parseTcFromYaml()</code> and <code>serializeTcToYaml()</code>, reads and writes
+                    annotation fields from YAML frontmatter without corrupting anything else in the file</li>
+                <li>Built <code>validateTcAnnotation()</code>, validates all 6 field types and returns per-field error
+                    messages consumed by the UI layer</li>
                 <li>Mode-aware serialisation: pro-only fields only written when professional editor is active</li>
-                <li>Schema version stamping and real-world compatibility testing against JabRef's 60-file ADR corpus</li>
-                <li>82 tests across 4 suites — including fixing all fixture breakage when Track A migrated the grammar mid-project</li>
+                <li>Schema version stamping and real-world compatibility testing against JabRef's 60-file ADR corpus
+                </li>
+                <li>82 tests across 4 suites, including fixing all fixture breakage when Track A migrated the grammar
+                    mid-project</li>
             </ul>
             <div class="tech-tags">
                 <span class="tag">TypeScript</span>
@@ -81,21 +89,25 @@
         <div class="project-card">
             <div class="project-header">
                 <div>
-                    <p class="project-context">CS 3100 · Full-Stack Desktop App · Team of 4</p>
+                    <p class="project-context">CS 3100 - Full-Stack Desktop App - Team of 4</p>
                     <h3>CookYourBooks</h3>
                 </div>
-                <a href="https://github.com/NaftaliCaplan/cook-your-books" target="_blank" class="project-link">repo →</a>
+                <a href="https://github.com/NaftaliCaplan/cook-your-books" target="_blank" class="project-link">repo
+                    →</a>
             </div>
             <p class="project-desc">
                 Recipe management app: store recipes, scale servings, step through instructions while you cook.
-                The feature I'm most proud of is the save function in the recipe editor — not because it was technically
-                exotic, but because I wanted it to actually work correctly, not just appear to.
+                The feature I'm most proud of is the save function in the recipe editor not because it was flashy but
+                because it took a lot of troubleshooting to really nail and work as intended.
             </p>
             <ul class="contribution-list">
-                <li>Built the live timer as a first-class instruction field — editable in the recipe editor, persisted in the data model, starts/pauses and counts down live in cook mode</li>
+                <li>Built the live timer as a first-class instruction field thats editable in the recipe editor,
+                    persisted
+                    in the data model, starts/pauses and counts down live in cook mode</li>
                 <li>Cook mode step-through interface with active timer integration</li>
                 <li>Full recipe editor: GUI form state, validation, and persistence layer</li>
-                <li>Introduced <code>ThemeViewModel</code> and refactored <code>MainViewController</code> to decouple theme state; dark mode PR merged via conflict resolution</li>
+                <li>Introduced <code>ThemeViewModel</code> and refactored <code>MainViewController</code> to decouple
+                    theme state; dark mode PR merged via conflict resolution</li>
             </ul>
             <div class="tech-tags">
                 <span class="tag">Java</span>
@@ -108,14 +120,13 @@
         <div class="project-card project-card--wip">
             <div class="project-header">
                 <div>
-                    <p class="project-context">Personal project · In design</p>
+                    <p class="project-context">Personal project - In production</p>
                     <h3>Colorblind Cook Assistant <span class="wip-badge">in progress</span></h3>
                 </div>
             </div>
             <p class="project-desc">
-                A cooking assistant designed around colorblindness — helping users identify doneness, ripeness, and
-                visual cooking cues they'd otherwise have to guess at. Currently in the design phase, which is my
-                favourite part anyway.
+                A cooking assistant designed around colorblindness, helping users identify doneness, ripeness, and
+                visual cooking cues they'd otherwise have to guess at. Currently in early stages of development.
             </p>
         </div>
 
@@ -158,7 +169,7 @@
 
     <section id="contact">
         <h2 class="section-title">Contact</h2>
-        <p class="contact-sub">Open to opportunities, collaborations, and conversations.</p>
+        <p class="contact-sub">Open to Anything.</p>
         <div class="contact-links">
             <a href="mailto:caplan.naf@northeastern.edu" class="contact-item">
                 <span class="contact-label">email</span>
@@ -172,7 +183,7 @@
     </section>
 
     <footer>
-        <span class="muted">designed first, then built</span>
+        <span class="muted">designed first, then built :)</span>
     </footer>
 
 </body>
