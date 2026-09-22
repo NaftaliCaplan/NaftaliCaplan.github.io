@@ -17,7 +17,7 @@
 
         <header>
             <h1>Tali Caplan</h1>
-            <p class="meta">cs student · northeastern university</p>
+            <p class="meta">CS student · Northeastern University</p>
             <nav>
                 <a href="#projects">projects</a> ·
                 <a href="#skills">skills</a> ·
@@ -28,12 +28,13 @@
 
         <section>
             <p>
-                I really enjoy the design phase of a project, thinking through options and structure. I really want to
-                ensure I'm diving in with a clear plan. I also enjoy working on more raw backend code that drives the
-                whole program.
+                I really like the design phase of a project, thinking through options and structure, more than anything
+                else.
+                I really want to ensure I have a clear plan. I also enjoy working on more raw backend code
+                that drives the whole program.
             </p>
             <p>
-                When I'm not at a computer: snowboarding, swimming, the gym, or sleeping.
+                When I'm not at a computer: snowboarding, swimming, the gym, eating, or sleeping.
             </p>
         </section>
 
@@ -61,20 +62,24 @@
                         pattern, fit). You can fix the tags if it gets something wrong, throw stuff in the laundry so
                         it's skipped, and save outfits you like</li>
                     <li><strong>Outfit generator</strong>: pick a vibe (casual, formal, beachwear, etc.) and the
-                        temperature, and it puts together a full outfit plus a quick tip on how to wear it</li>
+                        temperature, and it puts together a full outfit plus a tip on how to wear it</li>
                     <li><strong>Personalization</strong>: take a selfie and fill in a couple things (height, build) and
-                        it leans toward stuff that suits you. It only ever gives bonuses, never "this looks bad on you,"
-                        because nobody wants their app judging them</li>
+                        it leans toward stuff that suits you. It only ever gives bonuses relative to you as a person,
+                        never "this looks bad on you," because nobody wants their app judging them</li>
                 </ul>
 
-                <h4>How it's built</h4>
+                <h4>How it works</h4>
                 <ul>
-                    <li>Outfit generation used to be an AI prompt. After a bunch of testing on my phone it kept making up
+                    <li>Outfit generation used to be an AI prompt. After a bunch of testing on my phone it kept making
+                        up
                         colors and forgetting to include pants, so I ripped it out and wrote a
                         <strong>rules engine</strong> instead. It goes through every possible outfit in your closet,
-                        scores each one, and picks the best</li>
+                        scores each one, and picks the best
+                    </li>
                     <li>The scoring checks color clashes, patterns, light/dark balance, style, weather, layering, and
-                        makes sure you don't end up wearing two hats (that happened). The clash list is hand-picked,
+                        makes sure you don't end up wearing two hats (that happened). The clash list, as well as most
+                        style choices were researched, crossrefrenced between each other, and hand-picked for best
+                        results,
                         since color theory says red + green is a great combo and... no</li>
                     <li>AI still does the parts it's actually good at, like tagging a photo, but I clean up and check
                         what it gives back before trusting it</li>
@@ -82,12 +87,16 @@
                     <li>314 tests, TypeScript with zero errors</li>
                 </ul>
 
-                <p class="note">
-                    Biggest takeaway: asking an AI nicely isn't the same as making sure something happens. The app got
-                    better every time I moved a rule out of a prompt and into actual code.
-                </p>
+                <h4>Takeaway</h4>
+                <ul>
+                    <li>Asking an AI nicely isn't the same as making sure something happens. The app got better every
+                        time I moved a role out of a prompt and into actual code.</li>
+                </ul>
 
-                <p class="meta">TypeScript · React Native · Expo · Cloudflare Workers AI · Jest</p>
+                <h4>Tech</h4>
+                <ul>
+                    <li>TypeScript, React Native, Expo, Cloudflare Workers AI, Jest</li>
+                </ul>
             </article>
 
             <article>
@@ -108,7 +117,8 @@
                 </p>
                 <ul>
                     <li>Designed <code>TcAnnotation</code> and all enum types (<code>TcCategory</code>,
-                        <code>TcSignal</code>, <code>TcStatus</code>) as the shared contract across the full team</li>
+                        <code>TcSignal</code>, <code>TcStatus</code>) as the shared contract across the full team
+                    </li>
                     <li>Built <code>parseTcFromYaml()</code> and <code>serializeTcToYaml()</code>, reads and writes
                         annotation fields from YAML frontmatter without corrupting anything else in the file</li>
                     <li>Built <code>validateTcAnnotation()</code>, validates all 6 field types and returns per-field
@@ -119,7 +129,10 @@
                     <li>82 tests across 4 suites, including fixing all fixture breakage when Track A migrated the
                         grammar mid-project</li>
                 </ul>
-                <p class="meta">TypeScript · js-yaml · ANTLR4 · Jest · VS Code Extension API</p>
+                <h4>Tech</h4>
+                <ul>
+                    <li>TypeScript, js-yaml, ANTLR4, Jest, VS Code Extension API</li>
+                </ul>
             </article>
 
             <article>
@@ -141,7 +154,10 @@
                     <li>Introduced <code>ThemeViewModel</code> and refactored <code>MainViewController</code> to
                         decouple theme state; dark mode PR merged via conflict resolution</li>
                 </ul>
-                <p class="meta">Java · JavaFX · MVVM · Gradle</p>
+                <h4>Tech</h4>
+                <ul>
+                    <li>Java, JavaFX, MVVM, Gradle</li>
+                </ul>
             </article>
         </section>
 
